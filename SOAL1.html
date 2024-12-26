@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal no.1</title>
+</head>
+<body>
+    <h2 style="color: red;">Menghitung luas dan keliling Lingkaran</h2>
+    <label for="jari">masukkan jari-jari :</label>
+    <input type="number" id="jari">
+
+    <button onclick="hitunglingkaran()">HITUNG</button>
+
+    <P>luas Lingkaran : <span id="luas">0</span></P>
+    <P>Keliling Lingkaran : <span id="keliling">0</span></P>
+
+<script>
+    function hitunglingkaran(){
+        let jari = document.getElementById('jari').value;
+        const phi = 3.14;
+        let luas = phi * (jari**2)
+        let keliling = 2* phi * jari
+        
+        document.getElementById('luas').innerHTML = luas;
+        document.getElementById('keliling').innerHTML = keliling;
+    }
+</script>
+    
+</body>
+</html>
